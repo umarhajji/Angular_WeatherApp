@@ -7,10 +7,10 @@
     <div class="screen">
         <img src="../assets/hot.webp" *ngIf="weatherData.main.temp > 15">
         <img src="../assets/cold.webp" *ngIf="weatherData.main.temp < 15">
-
+        <div class="screenData">
         <div class="location">{{ weatherData.name }}</div>
         <div class="temperature">{{ weatherData.main.temp | number: '1.0-0'}}°C</div>
-        
+    </div>
     </div>
 
     <div class="icons">

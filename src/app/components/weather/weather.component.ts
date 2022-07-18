@@ -13,7 +13,7 @@ export class WeatherComponent implements OnInit {
 
   }
 
-  cityName: string = 'Kano';
+  cityName: string = 'Katsina';
   weatherData?: WeatherData;
 
   ngOnInit(): void {
@@ -29,7 +29,7 @@ export class WeatherComponent implements OnInit {
   private getWeatherData(cityName: string) {
   this.weatherService.getWeatherData(cityName)
   .subscribe({
-      next: (response: any) => {
+      next: (response) => {
      this.weatherData = response;
       console.log(response);
       }
