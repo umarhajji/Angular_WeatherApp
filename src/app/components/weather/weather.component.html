@@ -1,0 +1,57 @@
+<div class="search">
+    <form #form="ngForm" (submit)="onSubmit()">
+        <input type="text" placeholder="Search city" name="city" (ngmodel)="cityName">
+    </form>
+</div>
+<div class="container">
+    <div class="screen">
+        <img src="../assets/hot.webp" *ngIf=" ">
+        <img src="../assets/cold.webp" alt="">
+    </div>
+    <div class="icons">
+        <div class="info-label">
+            More Information
+        </div>
+        <div class="info-container">
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="../assets/thermoco.png" alt="icon">
+                    <span>min</span>
+                </div>
+                <div class="info-value">
+                    5°C
+                </div>
+            </div>
+            
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="../assets/therm.png" alt="icon">
+                    <span>max</span>
+                </div>
+                <div class="info-value">
+                    5°C
+                </div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="../assets/humid.png" alt="icon">
+                    <span>Humidity</span>
+                </div>
+                <div class="info-value">
+                    5°C
+                </div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-block-label">
+                    <img src="../assets/wind.png" alt="icon">
+                    <span>Wind</span>
+                </div>
+                <div class="info-value">
+                    5c
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
