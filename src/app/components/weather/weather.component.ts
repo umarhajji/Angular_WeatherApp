@@ -13,7 +13,7 @@ export class WeatherComponent implements OnInit {
 
   }
 
-  cityName: string = 'Wellington';
+  cityName: string = 'Kano';
   weatherData?: WeatherData;
 
   ngOnInit(): void {

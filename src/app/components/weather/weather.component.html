@@ -3,11 +3,16 @@
         <input type="text" placeholder="Search city" name="city" (ngmodel)="cityName">
     </form>
 </div>
-<div class="container">
+<div class="container" *ngIf="weatherData">
     <div class="screen">
-        <img src="../assets/hot.webp" *ngIf=" ">
-        <img src="../assets/cold.webp" alt="">
+        <img src="../assets/hot.webp" *ngIf="weatherData.main.temp > 15">
+        <img src="../assets/cold.webp" *ngIf="weatherData.main.temp < 15">
+
+        <div class="location">{{ weatherData.name }}</div>
+        <div class="temperature">{{ weatherData.main.temp | number: '1.0-0'}}°C</div>
+        
     </div>
+
     <div class="icons">
         <div class="info-label">
             More Information
@@ -19,7 +24,7 @@
                     <span>min</span>
                 </div>
                 <div class="info-value">
-                    5°C
+                    {{weatherData.main.temp_min | number: '1.0-0'}}°C
                 </div>
             </div>
             
@@ -29,7 +34,7 @@
                     <span>max</span>
                 </div>
                 <div class="info-value">
-                    5°C
+                    {{weatherData.main.temp_max | number: '1.0-0'}}°C
                 </div>
             </div>
 
@@ -39,7 +44,7 @@
                     <span>Humidity</span>
                 </div>
                 <div class="info-value">
-                    5°C
+                    {{weatherData.main.humidity}}%
                 </div>
             </div>
 
@@ -49,9 +54,10 @@
                     <span>Wind</span>
                 </div>
                 <div class="info-value">
-                    5c
+                    {{weatherData.wind.speed}} km/h
                 </div>
             </div>
         </div>
     </div>
+
 </div>
